@@ -14,7 +14,7 @@ const person = {
 // person.city = "Cordoba";
 // console.log(person.city);
 
-//Object.key() permite acceder a las Keys
+//Object.keys() permite acceder a las Keys
 // const keys = Object.keys(person);
 // //para poder iterar se puede utilizar el forEach creando un array asi se crea la variable de arriba
 // //no se puede iterar con forEach con los objetos
@@ -26,12 +26,24 @@ const person = {
 
 // //Tambien se puede usar el
 // //For In
-// for (const key in person) {
+// for (const key in person) esa es la forma de llamarlo {
 //   if (Object.hasOwnProperty.call(person, key)) {
 //     /*esto va a devolver lo mismo que en el forEach pero si en vez de key se pone "lala" no va a devovler nada*/
 //     console.log(person[key]);
 //   }
 // }
+
+//otro ejemplo del FOR IN es
+//const object = { a: 1, b: 2, c: 3 };
+
+//for (const property in object) {
+//console.log(`${property}: ${object[property]}`);
+//}
+
+// expected output:
+// "a: 1"
+// "b: 2"
+// "c: 3"
 
 // //Otra manera de manipular el objeto es Object.values ()
 // //Object.values () nos permite acceder al valor del objeto
