@@ -44,3 +44,13 @@
 // // pero se deberioa dar que elija primero a la promesa antes que al setTimoput
 // //en el ccaso de que tuvieran mismos tiempos
 // console.log('Pedro');
+
+//Ejemplo 5
+setTimeout(() => console.log(`Mario`), 0);
+const promise = Promise.resolve();
+promise.then(() => console.log(`Juan`));
+console.log(`Pedro`);
+
+//esto es para mostrar que siempre se prefiere a la promesa antrs qeu al SetTimeout
+//Entonces esto lo va a mostrar la consola asi:
+//Pedro, Juan, Mario

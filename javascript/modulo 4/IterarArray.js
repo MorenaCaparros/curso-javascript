@@ -36,3 +36,6 @@ console.log(newArray); //lo que va a quedar es "Nombre: More"
 // Nombre: Pepe ..." y sigue"
 //CON MAP
 const newArray = miArray.map((name) => `Nombre: ${name}`); //esto es con return implicito sino tengo que poner{ y return `Nombre: ${name}`}
+//cuando pongo el punto . lo qeu hago es decir
+//entra aca al primero itera y busca el segundo elemento. para poder usar Map, tiene que ser un array.
+//si yo tuviera primero un objeto entonces haria "(el nombre del objeto).(el nombre del array).map( dentro de aca hago lo mismo uso el map)"

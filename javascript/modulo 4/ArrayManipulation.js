@@ -1,15 +1,20 @@
-const miArray = ['A', 'B', 'C', 'D'];
+const miArray = ["A", "B", "C", "D"];
 
 //PARA acceder aal ultimo se ve el ultimlo y se le resta 1 porque arranca en 0
 
 const lastElement = miArray[miArray.length - 1];
+
+//si quiero ver el primero lo que tengoqeu hacer es:
+
+const firstElement = miArray[0]; //se que siempre el 0 es el primero, lo mismo si se que quiero
+//el que esta en posicion 3 por ej que en este caso es la "D"
 
 console.log(lastElement); // en este caso me va adar  "D"
 
 //Buscar el indice de un element
 //yo quiero saber donde esta "B" entonces
 
-const element = 'C';
+const element = "C";
 //se usa indexOf
 const index = miArray.indexOf(element);
 
@@ -19,7 +24,7 @@ console.log(miArray(index)); //va a mostrar "C"
 
 //si quiero buscar un elemento que no esta index va a devolver -1 o undefined
 
-const otherElement = 'X';
+const otherElement = "X";
 
 const otherIndex = miArray.indexOf(otherElement);
 
@@ -28,13 +33,13 @@ console.log(otherIndex); //va a devolver -1
 console.log(miArray(otherIndex)); // va a devolver undefined
 
 //puedo hacer tambien
-miArray[1] = 'Crood';
+miArray[1] = "Crood";
 
 //Agregar un elemento al dinal del Array
 
 // PUSH
 
-miArray.push('LALA');
+miArray.push("LALA");
 
 //REMOVER un elemento del final del Array
 
@@ -46,7 +51,7 @@ const removedElement = miArray.pop();
 
 //Unshift
 
-const newLenght = miArray.unshift('Jorge'); // no necesito agregar una variable
+const newLenght = miArray.unshift("Jorge"); // no necesito agregar una variable
 
 //REMOVER un elemento del final del Array
 
@@ -55,7 +60,7 @@ const newLenght = miArray.unshift('Jorge'); // no necesito agregar una variable
 const removedOtherElement = miArray.shift();
 
 //SPLICE nos permite remover una serie de elementosdel Array
-const miOtherArray = ['lala', 'cece', 'ola', 'coca, cola'];
+const miOtherArray = ["lala", "cece", "ola", "coca, cola"];
 miOtherArray.splice(1, 2); //lo que hago es borrar cece y ola, si pongo [1,3] estoy removiendo todos menos "lala"
 
 //Ejemplo:
@@ -72,16 +77,16 @@ miOtherArray.splice(1, 2); //lo que hago es borrar cece y ola, si pongo [1,3] es
 const newArray = miOtherArray.slice(1, 3); // extraigo en este caso "cece" y "ola" y los guarde en "newArray"
 
 //FILTER busca todos los que estan cumpliendo la condicion y los devuelve. Sino esta, devuelve []
-const miArray = ['A', 'B', 'C', 'D', 'F', 'G', 'H', 'A'];
+const miArray = ["A", "B", "C", "D", "F", "G", "H", "A"];
 
-const filteredArray = miArray.filter((name) => name === 'A'); //lo que se hace es si esa condicion se cumple, eso va a la nueva variable
+const filteredArray = miArray.filter((name) => name === "A"); //lo que se hace es si esa condicion se cumple, eso va a la nueva variable
 
 //FIND va a devolver el primer valor que cumpla con la condicion. Si la condicion no esta devuelve undefined
-const existingElement = miArray.find((name) => name === 'A');
+const existingElement = miArray.find((name) => name === "A");
 
 // Esto sirve para  por ejemplo decir
 if (existingElement) {
-  console.log('El nombre esta en la lista');
+  console.log("El nombre esta en la lista");
 } else {
-  console.log('El nombre no esta en la lista');
+  console.log("El nombre no esta en la lista");
 }
