@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--  esto es necesario porqeu sino lo lee como codigo viejo, puede tirar error si no esta -->
+<html>
+  <head>
+    <title>Mi primera Web</title>
+    <!-- esto aparece como en la pestaña, y es lo que permite que cuando alguien este navegando si coincide en la busqueda le aparezca -->
+  </head>
+  <body>
+    <h1>Mi primer heading</h1>
+
+    <h4>Mi primer heading</h4>
+    <h5>Mi primer heading</h5>
+    <h6>Chanchito feliz</h6>
+    <!-- identacion (tabulacion) es como separar: siempre hay que apretar espacio (4) o tab -->
+    <!--las h hacen mas grande a lo que esta adentro pero porque son titulos, no las tengo uqe usar para quese vean mas grandes sino para expresar un titulo -->
+    <!--h7 no existe -->
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, totam
+      consequuntur!
+    </p>
+    <hr />
+    <h2>Mi primer heading</h2>
+    <p>Fugit, quo quibusdam sint expedita libero hic nulla reprehenderit!</p>
+    <!-- si yo quiero que este separado algo en el parrafo lo que hago es agregar otro <p>  -->
+    <!-- Tambien puedo mover de lugar los <h> y ademas para separarlos
+        lo que tengo que hacer es poner <hr>  -->
+    <p>
+      Lorem ipsum dolor
+      <span style="color: crimson"> amet consectetur adipisicing elit.</span>
+      Reiciendis at iure animi, <br />
+      mollitia nostrum cupiditate?
+    </p>
+
+    <!-- para resaltar algo, se usal la etiqueta de span. Lo resaltado es silencioso no se ve  -->
+    <!-- lo de style es de css para mostrar para que sirve span -->
+    <!-- con <br> se puede hacer saltos de linea  -->
+
+    <a target="_blank" href="https://www.google.com">Ir a Google</a>
+    <!-- es la etiqueta del hipervínculo nos va a servir para que nosotros podamos ir desde una página web 
+        a otra página web o incluso para que nosotros navegamos dentro de nuestra misma web hay qeu indicarle a 
+    donde quiere ir con href="SIEMPRE PONER HTTPS://" -->
+
+    <!-- con target="_blank" lo que yo le indico es que abra ese vinculo en otra pestaña  -->
+    <hr />
+
+    <img src="imagenes/imagenhtml.png" width="400" />
+    <!-- src= es para poner una imagen; width es para manejar el ancho es en pixeles
+        y height es para manejar el alto, pero en realidad va a intentar siempre mantenerse las proporcionalidades, por mas que solo
+        ponga una u otra, pero si puedo forzar esto usando ambas  (NO SE HACE EN general)
+     -->
+    <hr />
+    <h3>Formulario</h3>
+    <form>
+      <label for="nombre">Nombre</label>
+      <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        placeholder="Ingrese aqui su nombre"
+      />
+      <br />
+      <hr />
+      <label for="apellido">Apellido</label>
+      <input
+        type="text"
+        id="apellido"
+        name="apellido"
+        placeholder="Ingrese aqui su Apellido"
+      />
+      <br />
+      <hr />
+      <!-- form sirve para poder interactuar  obvtener del usuario datos.  -->
+      <!-- label sirve apra datos indicar que dato quiero se puede poner for="palabra" que debera ser la 
+    misma que se ponga en input, lo que hace es que cuando se apriete en este caso "nombre" igualmente entienda
+que debe escribir en ese casillero. VA DENTRO DE LABEL EL FOR-->
+
+      <!-- al lado de id, tiene que ir otro qeu se llame name="nombre o lo que sea", que no se puede olvidar
+    porque ahi se va aguardar el dato  -->
+
+      <!-- placeholder sirve para que se muestre con un gris suave en el casillero
+    que es lo qeu se quiere que se ponga -->
+
+      <!-- en type podemos poner, text, sumbit, email, 
+        password, radio (que es un botoncito redondo), 
+        checkbox (es uno de esos casilleros que se pueden seleccionar ),
+    file (si se pincha ahi se va a poder ir al seleccionador de archivos) -->
+      <label for="comentario">Comentario</label>
+      <br />
+
+      <textarea
+        cols="50"
+        rows="10"
+        id="comentario"
+        placeholder="Ingrese comentario"
+        name="comentario"
+      ></textarea>
+      <!-- el textarea sirve como para poner un cuadrado en donde se puede escribir
+      para las dimensiones se usa rows (filas para abajo), y cols (son columnas)-->
+    </form>
+  </body>
+</html>
