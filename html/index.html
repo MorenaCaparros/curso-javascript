@@ -2,10 +2,88 @@
 <!--  esto es necesario porqeu sino lo lee como codigo viejo, puede tirar error si no esta -->
 <html>
   <head>
+    <meta charset="UTF-8" />
+    <!--el meta sirve para poder poner caracteres como tildes por ej -->
     <title>Mi primera Web</title>
     <!-- esto aparece como en la pestaña, y es lo que permite que cuando alguien este navegando si coincide en la busqueda le aparezca -->
+    <style>
+      table,
+      th,
+      td {
+        border: 2px solid steelblue;
+      }
+      th,
+      td {
+        color: slateblue;
+      }
+    </style>
   </head>
   <body>
+    <!-- tablas  si uso style con eso le agrego bordes-->
+    <table style="width: 500px">
+      <!-- width es para que sea mas grande la tabla  -->
+      <!-- tr es filas dentro de la tabla  -->
+      <thead>
+        <!-- thead es cabacera -->
+
+        <tr>
+          <!-- NOMBRE es th lo qeu va arriba de la tabla  -->
+          <th>Producto</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- tbody hace lo mismo que thead, indica las cabeceras  no modifican nada pero algunos exploradores dejan que scrollees -->
+
+        <tr>
+          <!-- td se utiliza para nombrar cosas que estan dentro de neustra tabla  -->
+          <!-- sale como (Producto) y abajo (Hola beats), sale (Precio) y abajo (Gratis)  -->
+
+          <td>Hola beats</td>
+          <td>Gratis</td>
+        </tr>
+        <tr>
+          <!-- para agregar mas celdas para abajo vuelvo a agregar (tr) y (td)  -->
+          <td>Silla</td>
+          <td>$50.000</td>
+        </tr>
+        <tr>
+          <td>Silla Gamer EXTRA GRANDE</td>
+          <td>$1.000.000</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <!--esto es para que si un explorador usa el scroll, esto quede fijo, en este caso el total -->
+
+        <td></td>
+        <td>Total: $1.050.000</td>
+      </tfoot>
+    </table>
+    <!--ul es lista no ordenada aparecen como con puntitos -->
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+    </ul>
+
+    <!--ol es lista  ordenada aparecen adelante con numeros-->
+    <ol>
+      <li value="50">Elemento 1</li>
+      <!--con value le digo desde donde quiero que empiece la lista-->
+
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>
+        <ol>
+          <li style="list-style-type: lower-greek">subElemento 1</li>
+          <li style="list-style-type: lower-greek">subElemento 2</li>
+          <li style="list-style-type: lower-greek">subElemento 3</li>
+          <li style="list-style-type: lower-greek">subElemento 4</li>
+          <!--el style es para cambiar y que no tenga numero sino tenga otra cosa, si uso ctrl + espacio habilita el autocompletado y te muestra uqe podes usar-->
+        </ol>
+      </li>
+    </ol>
     <h1>Mi primer heading</h1>
 
     <h4>Mi primer heading</h4>
@@ -14,6 +92,7 @@
     <!-- identacion (tabulacion) es como separar: siempre hay que apretar espacio (4) o tab -->
     <!--las h hacen mas grande a lo que esta adentro pero porque son titulos, no las tengo uqe usar para quese vean mas grandes sino para expresar un titulo -->
     <!--h7 no existe -->
+
     <p>
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, totam
       consequuntur!
@@ -36,32 +115,32 @@
     <!-- con <br> se puede hacer saltos de linea  -->
 
     <a target="_blank" href="https://www.google.com">Ir a Google</a>
-    <!-- es la etiqueta del hipervínculo nos va a servir para que nosotros podamos ir desde una página web 
-        a otra página web o incluso para que nosotros navegamos dentro de nuestra misma web hay qeu indicarle a 
-    donde quiere ir con href="SIEMPRE PONER HTTPS://" -->
-
-    <!-- con target="_blank" lo que yo le indico es que abra ese vinculo en otra pestaña  -->
+    <!-- es la (etiqueta del hipervínculo) nos va a servir para que nosotros podamos ir desde una página web a otra página web o incluso para que nosotros navegamos dentro de nuestra misma web hay qeu indicarle a donde quiere ir con href="SIEMPRE PONER HTTPS://" -->
+    <!-- (con target="_blank") lo que yo le indico es que abra ese vinculo en otra pestaña  -->
     <hr />
 
     <img src="imagenes/imagenhtml.png" width="400" />
-    <!-- src= es para poner una imagen; width es para manejar el ancho es en pixeles
-        y height es para manejar el alto, pero en realidad va a intentar siempre mantenerse las proporcionalidades, por mas que solo
-        ponga una u otra, pero si puedo forzar esto usando ambas  (NO SE HACE EN general)
-     -->
+    <!-- (src=) es para poner una imagen; (width) es para manejar el ancho es en pixeles y (height) es para manejar el alto, pero en realidad va a intentar siempre mantenerse las proporcionalidades, por mas que solo ponga una u otra, pero si puedo forzar esto usando ambas  (NO SE HACE EN general) -->
     <hr />
     <h3>Formulario</h3>
-    <form>
+    <form action="" method="post">
+      <!-- yo le explico a donde quiero qeu vaya toda la info del formulario  -->
+      <!-- dentro de method tengo get y post. (Get) lo que hace es enviar los datos a traves de la url y aparece con get cuando usas enviar una url con los datos  "file:///C:/Dev/more/curso-javascript/html/7formulario?nombre=Santiago+&apellido=Carrizo&comentario=sdf" con (post) solo se pone (formulario) "file:///C:/Dev/more/curso-javascript/html/7formulario" pero si pones (inspeccionar) vas a (network) y apretas formulario y ahi dentro en (HEADERS) vas abajo y esta al info (get solo deja hasta 250 campos, en cambio post no tiene limites) -->
+
       <label for="nombre">Nombre</label>
       <input
+        value="Morena"
         type="text"
         id="nombre"
         name="nombre"
         placeholder="Ingrese aqui su nombre"
       />
+      <!-- value sirve para poner nombres por defecto  -->
       <br />
       <hr />
       <label for="apellido">Apellido</label>
       <input
+        value="Caparrós"
         type="text"
         id="apellido"
         name="apellido"
@@ -70,20 +149,13 @@
       <br />
       <hr />
       <!-- form sirve para poder interactuar  obvtener del usuario datos.  -->
-      <!-- label sirve apra datos indicar que dato quiero se puede poner for="palabra" que debera ser la 
-    misma que se ponga en input, lo que hace es que cuando se apriete en este caso "nombre" igualmente entienda
-que debe escribir en ese casillero. VA DENTRO DE LABEL EL FOR-->
+      <!-- label sirve apra datos indicar que dato quiero se puede poner for="palabra" que debera ser la     misma que se ponga en input, lo que hace es que cuando se apriete en este caso "nombre" igualmente entienda que debe escribir en ese casillero. VA DENTRO DE LABEL EL FOR-->
 
-      <!-- al lado de id, tiene que ir otro qeu se llame name="nombre o lo que sea", que no se puede olvidar
-    porque ahi se va aguardar el dato  -->
+      <!-- al lado de id, tiene que ir otro qeu se llame name="nombre o lo que sea", que no se puede olvidar    porque ahi se va aguardar el dato  -->
 
-      <!-- placeholder sirve para que se muestre con un gris suave en el casillero
-    que es lo qeu se quiere que se ponga -->
+      <!-- placeholder sirve para que se muestre con un gris suave en el casillero    que es lo qeu se quiere que se ponga -->
 
-      <!-- en type podemos poner, text, sumbit, email, 
-        password, radio (que es un botoncito redondo), 
-        checkbox (es uno de esos casilleros que se pueden seleccionar ),
-    file (si se pincha ahi se va a poder ir al seleccionador de archivos) -->
+      <!-- en type podemos poner, text, sumbit, email, password, radio (que es un botoncito redondo), checkbox (es uno de esos casilleros que se pueden seleccionar ), file (si se pincha ahi se va a poder ir al seleccionador de archivos) -->
       <label for="comentario">Comentario</label>
       <br />
 
@@ -93,9 +165,19 @@ que debe escribir en ese casillero. VA DENTRO DE LABEL EL FOR-->
         id="comentario"
         placeholder="Ingrese comentario"
         name="comentario"
-      ></textarea>
-      <!-- el textarea sirve como para poner un cuadrado en donde se puede escribir
-      para las dimensiones se usa rows (filas para abajo), y cols (son columnas)-->
+      >
+Este es un comentario por defecto</textarea
+      >
+      <!-- para poner valores por defecto en textarea pongo el comentario antes de el cierre entre ><-->
+
+      <br />
+      <button type="button">Tipo botón</button>
+      <button type="reset">Tipo reset</button>
+      <button type="submit">Tipo sumbit</button>
+
+      <!-- el textarea sirve como para poner un cuadrado en donde se puede escribir para las dimensiones se usa rows (filas para abajo), y cols (son columnas)-->
+      <!-- en vez de usar sumbit al final paa enviar un texto se usa button porque permite agregar etiquetas adentro. (Siempre hay que especificar el tipo en el button) -->
+      <!-- en type se puede poner (button)= es un boton de enviar hay que especificarle que va a hacer pero eso con javascript (reset)= lo qeu hace es cambiar todo a como estaba al inicio (sumbit)= envia los datos a donde yo puse action -->
     </form>
   </body>
 </html>
