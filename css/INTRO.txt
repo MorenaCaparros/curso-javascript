@@ -1,0 +1,36 @@
+QUE ES CSS
+css significa cascading stylesheets y esto lo que hace es que describe la presentación de un documento escrito con html y un
+documento html puede tener múltiples estilos escritos con css y ustedes escriben solamente un html y lo 
+que pueden hacer es ir cambiando los css
+
+BOOTSWATCH.COM url para ver estilos
+
+COMO FUNCIONA
+funciona en base a selectores. Con estos vamos a ir a seleccionar elementos que se encuentren dentro de nuestro
+documento html y  podemos seleccionar un único elemento o  seleccionar más de un elemento
+
+
+(la estructura para todos es [SELECCIONO UNO O + ELELEMENTOS]; abro {} DENTRO pongo 
+lo que quiero, las propiedades (ejemplo text-algin; color etc), y DENTRO de las propiedades
+establezco cual quiero, SIGUE UN ; SIEMPRE )
+
+para un solo elemento:
+(elemento) {
+    text-algin:left;  
+    color: white;
+}
+
+para +1 elemento:
+
+* (todos los elementos del html) {
+
+    box-sizing:border-box
+
+}
+
+para seleccionar mas de un elemetn oqeu tenga clase:
+.(va el punto y el nombre de la clase) {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0,3);
+}
