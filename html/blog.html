@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Mi primer blog</title>
+    <style>
+      header,
+      h1,
+      h2 {
+        text-decoration-color: slateblue;
+      }
+      th,
+      td {
+        color: slateblue;
+      }
+      * {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="titulo">Abogacia e IA</h1>
+      <!-- se le pone id para que sea un identificador unico. si quiero ponerle el mismo identificador a varios elementos
+    NO USO (ID) uso (CLASS), porque usar (id)  en varios es una MALA PRACTICA, para eso se usa (class)-->
+    </header>
+    <!-- se pueden crear tantas etiquetas de header como se quiera
+     pero no se puede poner una de header adentro de otra.
+      ni header adentro de footer-->
+    <div><p>Soy un parrafo dentro de un div</p></div>
+    <!-- div era utilizada antes es lo mismo que section y articule. si hay un div adentro de un div, no se debe poner un parrafo o algo, porque es mas facil tener uno solo y ya -->
+    <section>
+      <article class="post">
+        <h2>Inteligencia Artificial</h2>
+        <p>Descripción</p>
+        <img src="../imagenes/ia.jpg" width="400" />
+        <p>
+          La inteligencia artificial es la habilidad de una máquina de presentar
+          las mismas capacidades que los seres humanos, como el razonamiento, el
+          aprendizaje, la creatividad y la capacidad de planear.
+        </p>
+      </article>
+      <article class="post">
+        <h2>Derecho</h2>
+        <p>Definicion</p>
+        <img src="../imagenes/derecho.jpg" width="400" />
+        <p>
+          El derecho​ es un conjunto de principios y normas generalmente
+          inspirados en ideas de justicia y orden, que regulan las relaciones
+          humanas en toda sociedad y cuya observancia es impuesta de forma
+          coactiva por parte de un poder público.
+        </p>
+      </article>
+      <article class="post">
+        <h2>Sistemas expertos legales</h2>
+        <p>Relacionando IA y derecho</p>
+        <img
+          src="../imagenes/Inteligencia-artificial-derecho.jpg"
+          width="400"
+        />
+        <p>
+          Los sistemas expertos legales son programas computacionales que,
+          alimentándose desde una base de datos de información técnica preparada
+          por expertos en una materia y ordenadas mediante un sistema de normas
+          de inferencia, proveen información con soluciones específicas a
+          consultas de carácter legal.
+        </p>
+      </article>
+      <!-- articule se utiliza para poder definir los (posts de un blog) donde vamos a poder colocar (el título) vamos a poder colocar una (descripción imagen), (párrafo que va a contener todo el texto de nuestro post )
+      (para poder enmarcar una publicación),(para un tweet) en el caso de twitter, (para una imagen) en el caso de instagram  -->
+    </section>
+    <!-- va a ir entre header y footer. Son las secciones y voy a poder poner las que quiera y las etiquetas que quiera-->
+    <footer>
+      <a href="#titulo">Ir al titulo</a>
+      <!-- con esto lo que se hace es (href + #) se pone numeral y el nombre del id esto hace que con esto vuelva a donde esta ese id -->
+      <br />
+      <br />
+
+      <a href="mailto:morens217@gmail.com"> Contáctame aquí </a>
+      <p>Copyright 2021</p>
+      <!-- el mailto es para que se haga como un hipervinculo y despues tengo que volver a ponerlo. Puedo poner directamente "mail" o lo qeu sea -->
+    </footer>
+    <!-- se utiliza para poner el pie de pagina de la pagina web. podemos tener múltiples etiquetas de footer dentro de nuestra aplicación 
+    va a tener cosas como el: (copyright de nuestra aplicación), (información de contacto del sitio), o (cómo navegar dentro del sitio), (links para poder volver al comienzo de nuestra página web), (información relacionada con el autor)-->
+  </body>
+</html>

@@ -1,0 +1,100 @@
+#titulo {
+  color: green;
+}
+
+/* para poder seleccionar id pongo #, para seleccionar todas las clases pongo .(clase) */
+
+.texto {
+  color: hotpink;
+}
+
+/* para seleccionar una clase que contenga uan det. 
+palabra pongo "p.(palabra que quiero que contenga) */
+/* otra cosa importante: la ultima instruccion se ANTEPONE a la anterior, 
+ en este caso sobreescribio el color rosa con el verde porque el especial fue despues de texto*/
+p.especial {
+  color: chocolate;
+}
+
+/* con div p lo que digo es: en div, los parrafos que esten quiero que tengan este estilo */
+div p {
+  color: aqua;
+}
+
+/* si quiero que algo tenga un mismo estilo +1 elemento lo uqe hago es poner el elemento
+y una coma, volvi a poner div pq quiero que se seleccione SOLO a los h3 que esten dentro de 
+DIV */
+div h2,
+div h3 {
+  color: brown;
+}
+
+/* con el * selecciona todo dentro de html. El universal va a reemplazar el color 
+u otro elemento pero si no han sido definidas antes por otro selector.
+Si fueron definidas antes, NO LO SOBREESCRIBE */
+* {
+  font-size: 24px;
+  color: black;
+}
+
+/* /* con # y 3 numeros y letras puedo armar colores, el (0) es la ausencia de color y 
+(f) es color intenso, (fff) es blanco y (000) es negro */
+/* con 6 digitos llego a colores mas fuertes o mas intensos y mas cantidad de colores 
+los dos primeros digitos son del rojo, los del medio del verde y los otros de azul  
+
+.color {
+  color: #0f0;}
+
+  .color {
+  color: rgb(0, 255, 30);
+}
+
+ */
+
+/*  para los bordes hay que: poner el elemnto despues { y adentro poner: pixeles (ej: 6px) (color)
+y se deben poner el tipo. Hay distintos tipos de bordes: 
+solid; 
+dashed; 
+dotted; 
+double; 
+groove; 
+ridge; 
+inset; 
+ouset; 
+none; 
+hidden}  */
+
+/* .color {
+  border: 5px red inset;
+} */
+
+/* ESTILOS EN BORDER */
+/* para  usar solo el estilo es border-style
+con border-radius se le da borde REDONDEADO */
+/* formas de medida absolutas que no son muy recomendadas pq dependen de los dispositivos en los cuales lo estes viendo:
+pulgadas = px
+centimetro = cm
+milimetro = mm
+pulgadas = in
+punto = pt  (1/72 de pulgada)
+picas = pc (12 puntos)*/
+
+/* Lo que se usa es las relativas
+el tamaño de la fuente qe se esta utilizando multiplicada por el numero adelante = 2em (2 veces em)
+y despues rem que es en general 16 px pero se puede cambiaryendo a html y cambiarlo de ahi*/
+.color {
+  border-style: solid;
+  border-color: blue;
+  border-radius: 5px;
+  border-width: 5pt;
+}
+
+/* con background-color: es darle color de fondo a algo
+con rgba lo que hago es, los 3 primeros valores son los colores
+y el ultimo valor es la opacidad ej: rgba(0, 0, 0, 1) 1 es muy opaco 1 0 nada opaco
+tambien puedo hacer que un color sea mas opaco o mas transparente con 
+opacity*/
+
+#fondo {
+  background-color: rgba(0, 0, 0, 0.7);
+}

@@ -1,0 +1,41 @@
+que es html: hyper text markup language. Es el lenguaje estandar para crear paginas web
+Describe la estructura/ como se va a construir la pagina web
+Le indica al explorador que y como mostrarlo
+Consite en etiquetas
+Las etiquetas indican parrafos, titulos, vinculos, etc.
+
+COMO FUNCIONA html
+html funciona como una  estructura de árbol donde nosotros vamos a tener una raíz 
+(nodo prioncipal) yu a ese nodo se le agregan mas nodos
+vamos a poder agregar un cuerpo vamos a poder también agregar una cabeza le vamos a ir indicando
+contenido  
+
+QUE ES UNA ETIQUETA 
+consta de tres partes:
+*la apertura de la etiqueta: donde tenemos que utilizar el símbolo de mayor, el símbolo de menor y dentro de
+esto el nombre de la etiqueta
+*el contenido de nuestra etiqueta: donde  tenemos que colocar el contenido dentro de la
+etiqueta 
+*el cierre de nuestra etiqueta que es exactamente lo mismo que la apertura pero fíjense que en este caso esta contiene una
+flecha hacia adelante por ende cuando nosotros vayamos a abrir una etiqueta lo que haremos será colocar símbolo mayor
+el nombre de la etiqueta y después el símbolo de mayor a menor después de eso nosotros podemos inmediatamente cerrar
+nuestra etiqueta 
+
+ EJ: ,<soy-una-etiqueta> (apertura)
+     Aca va el contenido de la etiqueta (contenido)
+     </soy-una-etiqueta> (cierre)
+
+
+estructura  de html
+
+<html>
+  <head> (aca va contenido que puede o no verlo el usuario)
+    <title>Document</title> (contenido)
+  </head>
+
+  <body> (aca si lo ve el usuario)
+    <h1> Un heading o titulo </h1> (h1 siginifca titulo)
+    <p> un paarafo </p> (p es parrafo)
+  </body>
+
+</html>
