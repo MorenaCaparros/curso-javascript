@@ -86,15 +86,25 @@ y despues rem que es en general 16 px pero se puede cambiaryendo a html y cambia
   border-style: solid;
   border-color: blue;
   border-radius: 5px;
-  border-width: 5pt;
+  border-width: 2em;
 }
 
 /* con background-color: es darle color de fondo a algo
 con rgba lo que hago es, los 3 primeros valores son los colores
 y el ultimo valor es la opacidad ej: rgba(0, 0, 0, 1) 1 es muy opaco 1 0 nada opaco
 tambien puedo hacer que un color sea mas opaco o mas transparente con 
-opacity*/
+opacity
+*/
 
 #fondo {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(204, 0, 0);
+  /* opacity: 0.3; */
+  height: 200px;
+  background-image: url('../imagenes/derecho.jpg');
+  background-size: auto;
 }
+
+/* Si uso auto es que me lo deja segun el tamano de la letra
+si uso cover usa todo el ancho de manera proporcional a como esta el alto y si se achica o se agranda la pagina tambienb lo hace 
+la imagen,  lo que no pasa con auto y contain
+ */
