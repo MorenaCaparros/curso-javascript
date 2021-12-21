@@ -34,7 +34,7 @@ u otro elemento pero si no han sido definidas antes por otro selector.
 Si fueron definidas antes, NO LO SOBREESCRIBE */
 * {
   font-size: 24px;
-  color: black;
+  /* color: black;  lo tuve que comentar porque si no no le puedo dar color a los links de mas abajo */
 }
 
 /* /* con # y 3 numeros y letras puedo armar colores, el (0) es la ausencia de color y 
@@ -99,12 +99,198 @@ opacity
 #fondo {
   background-color: rgba(204, 0, 0);
   /* opacity: 0.3; */
-  height: 200px;
-  background-image: url('../imagenes/derecho.jpg');
-  background-size: auto;
+  height: 400px;
+  /* background-image: url("../imagenes/derecho.jpg"); */
+
+  /* background-repeat: repeat-y;
+  background-position: center bottom; */
+  background: chocolate url("../imagenes/derecho.jpg") repeat-y center bottom;
+  background-size: 100px 100px;
 }
 
 /* Si uso auto es que me lo deja segun el tamano de la letra
 si uso cover usa todo el ancho de manera proporcional a como esta el alto y si se achica o se agranda la pagina tambienb lo hace 
 la imagen,  lo que no pasa con auto y contain
+si no quiero que se repita la imagen,
+uso   background-repeat: no-repeat;
+si quiero que se repita de manera horizontal uso: 
+ background-repeat: repeat-x;
+ si quiero quese repita vertical uso: 
+ background-repeat: repeat-y
+ 
+ siquiero establecer la posicion uso 
+background-position: right top/ left top/ center top/ 
+en vez de top puede ser center y bottom
+
+TODO ESTO SE PUEDE USAR PONIENDO SOLO: 
+background: aca se pone todo lo anterior
+
+Ademas se puede poner lo del tamaño
+ 
+si se usa  background-size es necesario quesea despues de usar background, o sino dentro de background una vez que se puso todo
+se pone / (aca el tamaño ejemplo, 100px 100px)
  */
+
+.margen {
+  background-color: chocolate;
+  margin: 15px;
+  padding: 30px 15px;
+  border: solid 1px black;
+  height: 200px;
+  width: 50px;
+  overflow: scroll;
+  outline: 1px solid red;
+}
+
+/* margin da margen fuera del elemento y paddigng lo da adentro 
+lo que hace overflow es que si hay elementos que no se logran ver qeu pasa: podemos poner visible o hidden (visible u oculto) tambien por 
+scroll (agrega barritas para poder scrollear y ver la palabra pero qeudando adentro)
+outline es el borde del recuadro */
+
+.text {
+  font-family: "Twinkle Star", sans-serif;
+  text-align: justify;
+  text-decoration: overline;
+  text-shadow: 3px 7px 5px blue;
+}
+
+/* undeerline es subrayad
+line-through tachado
+overline linea encima del texto
+text-shadow es para sombreado, el primer valor es para la derecha, segundo cuanto hacia abajo, el 3ero es el difuminado
+font family es para las funetes y pone varias pq si una no anda usa la otra y asi
+si quiero una fuente diferente puedo ir a google fonts, tengo que usar la que quiero no todas pq sino muy pesado
+utilizo la que quiero y copio el codigo y lo tengo que pefar en el head de html el que esta abajo de html
+despues voy a font-family y pongo 'el nombre de la fuente' pongo una al lado en caso de que esa no se pueda cargar.
+ */
+
+/* LINKS */
+a:link {
+  color: blueviolet;
+}
+/* cuando lo pongo asi link: lo que estoy indicando es el color que van a tener los links
+que NO HAYAN sido visitados */
+a:visited {
+  color: aqua;
+}
+
+a:hover {
+  color: chartreuse;
+}
+/* hover es cuando le paso el mouse por encima  y active cuando estoy pinchando el link
+EL ORDEN DE LINK- VISITED- HOVER- ACTIVE TIENE QUE IR ASI, NO PUEDE IR EN OTRO ORDEN
+*/
+a:active {
+  color: red;
+}
+
+/* a todos se les puede agregar todas las propiedades de css que se vieron */
+
+ul {
+  background-color: blue;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* le pongo list-style-type none para que no me ponga las caracteristicas que por defecto tiene que es en este caso un puntito
+al lado de uno dos y tres */
+
+/* Tablas */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* lo de collpase es para uqe no haya espacio entre las celdas */
+
+th,
+td {
+  border: solid 1px white;
+  text-align: left;
+}
+tr:nth-child(even) {
+  background-color: greenyellow;
+}
+th {
+  background-color: green;
+  color: white;
+  text-align: left;
+}
+
+tr:hover {
+  background-color: tomato;
+  cursor: pointer;
+}
+
+/* eso se usa para hacer algo con los pares (odd) y con los impares (even) y si quiero que hover m,e tome a todo lo tengo que poner a lo ultimo  */
+
+span {
+  display: block;
+  /* visibility: hidden; */
+  max-width: 700px;
+  background-color: greenyellow;
+}
+/* esto se usa para uqe haga un salto de linea, en general todos por defecto vienen block pero span no 
+para ocultarlos puedo usar
+  visibility: hidden;
+  max-width es para estblecer cual es el ancho maximo pero puede ser menos 
+ */
+
+.inline {
+  display: inline;
+}
+
+/* esto es para que con los uqe hacen alto de linea los puedas tener uno al lado del otro en vez de usar block se usa INLINE */
+
+#position {
+  position: sticky;
+  left: 20px;
+  top: 5px;
+  /* lo comento pq se pone enciam de lala y lele */
+}
+
+/* static es la posicion que vienen todos los docs de html
+relative es la posicion relativa a donde ddeberia estar posicionado ese elemento 
+fixed es posicion con respecto a lo que estamos viendo en el explorador queda ahi y aunque scrollees para abajo eso se sigue viendo
+absolute se posiciona respecto del elemento padre mas cercano uqe este tenga y sino hay del body
+sticky es una parecida a static pero de donde esta si se empieza a hacer scroll va apra donde este y despues vuelve a su posicion original
+  */
+
+.left {
+  float: left;
+  width: 300px;
+}
+
+.right {
+  float: right;
+  width: 100px;
+}
+
+.container {
+  height: 200px;
+}
+
+.column {
+  margin: 0;
+  padding: 10px 0x;
+  width: 33.3%;
+}
+
+/* inline-block */
+.inline-block {
+  display: inline-block;
+  height: 55px;
+  background-color: peru;
+}
+
+/* la dif entre inline block e inline es que el que es block se le puede dar un ancho fijo en cambio inline solo
+se ajusta al texto */
+
+.center {
+  padding: 50px 0;
+  text-align: center;
+  width: 200px;
+  margin: 0 auto;
+  background-color: salmon;
+}
