@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -9,16 +11,18 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    
   </head>
   <body>
     <header>
       <h1 id="inicio">Derecho e Inteligencia Artificial</h1>
+      <img src "" alt="Hola mundo" id="holaMundo" />
     </header>
 
-    <section class="container">
+    <section class="container text">
       <a href="postOne.html">
-        <article class="post one">
-          <h2>Nuevo enfoque del Derecho</h2>
+        <article>
+          <h2 class="titulo uno">Nuevo enfoque del Derecho</h2>
           <p>
             Entendiendo todas las situaciones distintas que se viven, con
             distintos entornos y acompañamiento cada vez mayor de las
@@ -33,18 +37,18 @@
         </p>
       </a>
       <a href="postTwo.html"> 
-        <article class="post two">  
-          <h2>Inteligencia Artificial</h2>
+        <article>  
+          <h3 class="titulo dos">Inteligencia Artificial</h3>
           <p>Descripción de mi post 2</p>
-          <img src="../imagenes/ia.jpg" width="400" />
+          <img id="IA" src="../imagenes/ia.jpg" width="400" />
           <p>
             Texto del artículo que hay acá y es texto de prueba. Chanchito feliz!
           </p>
         </article>
       </a>
-      <a href="postThree.html">
-        <article class="post three">
-          <h2>Título de mi post 3</h2>
+      <a id="repos" href="postThree.html">
+        <article>
+          <h4 class="titulo tres">Título de mi post 3</h4>
           <p>Descripción de mi post 3</p>
           <img
           src="../imagenes/Inteligencia-artificial-derecho.jpg"
@@ -55,12 +59,15 @@
           </p>
         </article>
       </a>
+      <a></a>
     </section>
-    <footer>
+    <footer class="text">
       <section>
-        <a href="#inicio">Ir al comienzo</a>
+        <a class="text" href="#inicio">Ir al comienzo</a>
       </section>
       <p>Copyright 2021</p>
     </footer>
+    
+    <script src="../javascript/modulo 7/4CreateAndDeleteNodes.js"></script>
   </body>
 </html>
