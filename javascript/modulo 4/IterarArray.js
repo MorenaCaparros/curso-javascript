@@ -1,5 +1,5 @@
 //Iterar sobre un Array
-const miArray = ["More", "Juan", "Pepe", "Lala", "BuLma"];
+const miArray = ['More', 'Juan', 'Pepe', 'Lala', 'BuLma'];
 
 //como siempre se cual es la longitud de los array usando LENGHT hago
 for (let i = 0; 1 < miArray.length; i++) {
@@ -7,7 +7,7 @@ for (let i = 0; 1 < miArray.length; i++) {
 }
 
 for (let i = 0; 1 < miArray.length; i++) {
-  miArray[1] = "el mismo nombre"; //lo que hace es devolver "el mismo nombre" siempre porque yo cambie a todo lo qeu estaba en miArray por eso
+  miArray[1] = 'el mismo nombre'; //lo que hace es devolver "el mismo nombre" siempre porque yo cambie a todo lo qeu estaba en miArray por eso
 }
 
 // forma mas sencilla es
