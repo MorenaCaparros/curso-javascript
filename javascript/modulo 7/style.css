@@ -40,7 +40,7 @@ main {
 #avatar {
   width: 200px;
   height: 200px;
-  border: 2px solid black;
+  border: 2px solid rgb(238, 157, 51);
   border-radius: 50%;
 }
 
@@ -55,4 +55,24 @@ main {
 #repos-list {
   display: flex;
   flex-direction: column;
+}
+
+button,
+button:focus {
+  width: 100px;
+  height: 70px;
+  border: 2px solid rgb(247, 113, 3);
+  margin: 10px auto;
+  cursor: pointer;
+  background-color: rgb(236, 162, 112);
+  box-shadow: 4px 4px 5px darkgrey;
+  outline: none;
+}
+
+a {
+  color: salmon;
+}
+
+.filter {
+  filter: grayscale(0.5) blur(10px);
 }
